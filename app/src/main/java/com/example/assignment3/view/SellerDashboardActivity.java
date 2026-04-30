@@ -50,6 +50,12 @@ public class SellerDashboardActivity extends AppCompatActivity {
         // Update user info from Prefs
         ((TextView)header.findViewById(R.id.tv_header_name)).setText(pref.getString("user.name", "Seller"));
         ((TextView)header.findViewById(R.id.tv_header_email)).setText(pref.getString("user.email", ""));
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new SellerHomeFragment())
+                    .commit();
+        }
     }
 
     private void saveTheme(boolean isDark) {

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"> <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="My Details"
+            android:textColor="#212121"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Full Name" android:textStyle="bold" android:textColor="#212121" />
+        <EditText android:layout_width="match_parent" android:layout_height="55dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext_grey" android:hint="Cody Fisher"
+            android:paddingStart="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Address" android:textStyle="bold" android:textColor="#212121" />
+        <EditText android:layout_width="match_parent" android:layout_height="55dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext_grey" android:hint="Address"
+            android:paddingStart="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Country" android:textStyle="bold" android:textColor="#212121" />
+        <EditText android:layout_width="match_parent" android:layout_height="55dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext_grey" android:hint="US"
+            android:paddingStart="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Date of Birth" android:textStyle="bold" android:textColor="#212121" />
+        <EditText android:layout_width="match_parent" android:layout_height="55dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext_grey" android:hint="12/07/1990"
+            android:paddingStart="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Gender" android:textStyle="bold" android:textColor="#212121" />
+        <EditText android:layout_width="match_parent" android:layout_height="55dp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext_grey" android:hint="Male"
+            android:paddingStart="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Phone Number" android:textStyle="bold" android:textColor="#212121" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext_grey"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_myplaces" />
+            <EditText android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="@android:color/transparent" android:hint="+1 234 453 231 506"
+                android:paddingStart="12dp" android:inputType="phone" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="Log Out"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#ED4C5C"
+            app:cornerRadius="15dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+</androidx.core.widget.NestedScrollView>
