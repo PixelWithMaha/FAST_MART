@@ -23,9 +23,7 @@
         <activity
             android:name=".view.AddProductActivity"
             android:exported="false" />
-        <activity
-            android:name=".view.SellerHomeActivity"
-            android:exported="false" />
+
         <activity
             android:name=".view.SellerDashboardActivity"
             android:exported="false" />

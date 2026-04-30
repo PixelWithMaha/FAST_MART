@@ -23,7 +23,8 @@ public class AddProductActivity extends AppCompatActivity {
             String uid = FirebaseAuth.getInstance().getUid();
 
             String id = FirebaseDatabase.getInstance().getReference("Products").push().getKey();
-            Product product = new Product(id, name, type, price, desc, uid);
+            int assignedImg = R.drawable.img_sony;
+            Product product = new Product(id, name, type, price, desc, uid,assignedImg);
 
             FirebaseDatabase.getInstance().getReference("Products").child(id).setValue(product)
                     .addOnSuccessListener(aVoid -> {

@@ -3,11 +3,12 @@ package com.example.assignment3.view.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView; // Added
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.assignment3.R;
-import com.example.assignment3.data.model.Product;
+import com.example.assignment3.data.model.Product; // Verified path
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
@@ -32,6 +33,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         Product p = list.get(position);
         holder.name.setText(p.name);
         holder.price.setText("$" + p.price);
+
+        // Fixed the double dot and ensured productImage is used
+        if (p.imageRes != 0) {
+            holder.productImage.setImageResource(p.imageRes);
+        } else {
+            // Use your actual placeholder name here
+            holder.productImage.setImageResource(R.drawable.img_apple_airpods);
+        }
+
         holder.itemView.setOnClickListener(v -> listener.onItemClick(p));
     }
 
@@ -39,10 +49,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView name, price;
+        ImageView productImage; // Added this
+
         public ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.tv_item_name);
             price = itemView.findViewById(R.id.tv_item_price);
+            // Must match the ID in your item_product.xml
+            productImage = itemView.findViewById(R.id.iv_product_img);
         }
     }
 }
