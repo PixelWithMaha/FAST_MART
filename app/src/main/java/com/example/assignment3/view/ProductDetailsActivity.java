@@ -1,8 +1,10 @@
 package com.example.assignment3.view;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +17,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.assignment3.R;
+import com.example.assignment3.data.local.CartDbHelper;
 import com.example.assignment3.data.model.Product; // Make sure this import exists
 import com.google.android.material.button.MaterialButton;
 
@@ -86,5 +89,29 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     dialog.cancel();
                 })
                 .show();
+    }
+
+    private void setupAddToCart() {
+        Button btnBuyNow = findViewById(R.id.buyButton); // Ensure this ID matches your XML
+
+        // 1. Get the product object passed from the previous screen
+        Product product = (Product) getIntent().getSerializableExtra("product_data");
+
+        btnBuyNow.setOnClickListener(v -> {
+            if (product != null) {
+                // 2. Initialize the Cart SQLite Helper
+                CartDbHelper cartDb = new CartDbHelper(ProductDetailsActivity.this);
+
+                // 3. Add to SQLite (Requirement 2a)
+                // We use quantity 1 by default for the first click
+                cartDb.addOrUpdate(product, 1);
+
+                Toast.makeText(this, product.name + " added to cart!", Toast.LENGTH_SHORT).show();
+
+                // Optional: Move to Cart screen immediately
+                Intent intent = new Intent(ProductDetailsActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
