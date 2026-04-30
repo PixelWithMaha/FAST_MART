@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,13 +45,20 @@ public class SplashActivity extends AppCompatActivity {
                 //pref.edit().clear().apply();
                 boolean isFirstTime = pref.getBoolean("user.isFirstTime", true);
                 boolean isLoggedIn = pref.getBoolean("user.isLoggedIn", false);
+                String accountType = pref.getString("user.type", "Buyer");
+
                 Intent intent;
 
                 if (isFirstTime) {
                     intent = new Intent(SplashActivity.this, OnboardingActivity.class);
-                } //else if (isLoggedIn) {
-                    //intent = new Intent(SplashActivity.this, MainActivity.class);
-                //}
+                } else if (isLoggedIn) {
+
+                    if ("Seller".equals(accountType)) {
+                        intent = new Intent(SplashActivity.this, SellerDashboardActivity.class);
+                    } else {
+                        intent = new Intent(SplashActivity.this, MainActivity.class);
+                    }
+                }
                 else {
                     intent = new Intent(SplashActivity.this, AuthActivity.class);
                 }
