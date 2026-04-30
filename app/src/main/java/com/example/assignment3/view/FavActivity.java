@@ -1,26 +1,34 @@
 package com.example.assignment3.view;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.example.assignment3.R;
+import com.example.assignment3.data.local.FavDbHelper;
+import com.example.assignment3.data.model.Product;
+import com.example.assignment3.view.adapter.FavAdapter;
+import java.util.List;
 
 public class FavActivity extends AppCompatActivity {
+    private RecyclerView rv;
+    private FavDbHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_fav);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        db = new FavDbHelper(this);
+        rv = findViewById(R.id.rv_favorites);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        load();
+    }
+
+    @Override
+    protected void onResume() { super.onResume(); load(); }
+
+    private void load() {
+        List<Product> list = db.getAll();
+        rv.setAdapter(new FavAdapter(this, list));
     }
 }
