@@ -37,12 +37,27 @@ public class SellerDashboardActivity extends AppCompatActivity {
         toggle.syncState();
 
         // Setup Custom Navigation Clicks
+
+        // Setup Custom Navigation Clicks
         View header = navigationView.getHeaderView(0);
 
-        header.findViewById(R.id.menu_home).setOnClickListener(v -> closeDrawer());
-        header.findViewById(R.id.menu_orders).setOnClickListener(v -> closeDrawer());
-        header.findViewById(R.id.menu_settings).setOnClickListener(v -> closeDrawer());
+// Load Home Fragment
+        header.findViewById(R.id.menu_home).setOnClickListener(v -> {
+            loadFragment(new SellerHomeFragment());
+            closeDrawer();
+        });
 
+// Placeholder for Orders
+        header.findViewById(R.id.menu_orders).setOnClickListener(v -> {
+            // loadFragment(new OrdersFragment());
+            closeDrawer();
+        });
+
+// Load Account Settings Fragment (The UI you just shared)
+        header.findViewById(R.id.menu_settings).setOnClickListener(v -> {
+            loadFragment(new AccountSettingsFragment());
+            closeDrawer();
+        });
         // Theme Switchers
         header.findViewById(R.id.btn_light).setOnClickListener(v -> saveTheme(false));
         header.findViewById(R.id.btn_dark).setOnClickListener(v -> saveTheme(true));
@@ -56,6 +71,13 @@ public class SellerDashboardActivity extends AppCompatActivity {
                     .replace(R.id.fragment_container, new SellerHomeFragment())
                     .commit();
         }
+
+
+    }
+    private void loadFragment(androidx.fragment.app.Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 
     private void saveTheme(boolean isDark) {
