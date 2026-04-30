@@ -9,7 +9,8 @@ import com.google.firebase.database.DataSnapshot;
 
 public class UserRepository {
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+    private String dbUrl= "https://fast-mart-b3543-default-rtdb.firebaseio.com/";
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance(dbUrl).getReference("Users");
 
     public Task<Void> registerUser(User user, String password) {
         return mAuth.createUserWithEmailAndPassword(user.email, password)

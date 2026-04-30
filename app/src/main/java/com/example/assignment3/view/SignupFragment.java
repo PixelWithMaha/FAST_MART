@@ -74,27 +74,18 @@ public class SignupFragment extends Fragment {
                 return;
             }
 
-            SharedPreferences sharedPref = getActivity().getSharedPreferences("FastMartPrefs", Context.MODE_PRIVATE);
-            String existingPassword = sharedPref.getString("pass_"+email, null);
 
-            if (existingPassword != null) {
-                Toast.makeText(getContext(), "Account already exists!", Toast.LENGTH_LONG).show();
-                return;
-            }
-            SharedPreferences.Editor editor = sharedPref.edit();
+            Bundle bundle = new Bundle();
+            bundle.putString("email", email);
+            bundle.putString("password", password);
 
-            editor.putString("pass_"+email,password);
-            editor.putString("current_user_email", email);
-            editor.putBoolean("user.isLoggedIn", true);
-            editor.putBoolean("user.isFirstTime",false);
-            editor.apply();
+            ProfileFragment profileFragment = new ProfileFragment();
+            profileFragment.setArguments(bundle);
 
-            Toast.makeText(getContext(), "Account created! Welcome ", Toast.LENGTH_LONG).show();
-
-            Intent intent = new Intent(getActivity(), MainActivity.class);
-            startActivity(intent);
-
-            getActivity().finish();
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.main, profileFragment)
+                    .addToBackStack(null)
+                    .commit();
 
         });
 

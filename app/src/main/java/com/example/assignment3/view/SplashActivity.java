@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,18 +43,18 @@ public class SplashActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 SharedPreferences pref = getSharedPreferences("FastMartPrefs", MODE_PRIVATE);
 
-                pref.edit().clear().apply();
+                //pref.edit().clear().apply();
                 boolean isFirstTime = pref.getBoolean("user.isFirstTime", true);
                 boolean isLoggedIn = pref.getBoolean("user.isLoggedIn", false);
-
                 Intent intent;
 
                 if (isFirstTime) {
                     intent = new Intent(SplashActivity.this, OnboardingActivity.class);
-                } else if (isLoggedIn) {
-                    intent = new Intent(SplashActivity.this, MainActivity.class);
-                } else {
-                    intent = new Intent(SplashActivity.this, MainActivity.class);
+                } //else if (isLoggedIn) {
+                    //intent = new Intent(SplashActivity.this, MainActivity.class);
+                //}
+                else {
+                    intent = new Intent(SplashActivity.this, AuthActivity.class);
                 }
 
                 startActivity(intent);
