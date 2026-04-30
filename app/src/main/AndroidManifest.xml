@@ -15,6 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment3">
         <activity
+            android:name=".view.BuyerAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.FavActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.BuyerHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.SellerAccountActivity"
             android:exported="false" />
         <activity
@@ -22,9 +37,6 @@
             android:exported="false" />
         <activity
             android:name=".view.AddProductActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.SellerHomeActivity"
             android:exported="false" />
         <activity
             android:name=".view.SellerDashboardActivity"

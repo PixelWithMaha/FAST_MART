@@ -1,10 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ProductDetailsActivity">
+    android:background="#F5F5F5"
+    tools:context=".ProductDetailsActivity"
+    android:id="@+id/main">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back_arrow" />
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="389dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#EAEAEA"
+            android:padding="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_apple_airpods"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="$349.99"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="SONY Premium Wireless Headphones"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/modelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Model: WH-1000XM4, Black"
+            android:textSize="14sp"
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time."
+            android:textSize="16sp"
+            android:textColor="#9E9E9E" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buyButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="20dp"
+            android:text="Buy Now"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/black"
+            app:cornerRadius="6dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
