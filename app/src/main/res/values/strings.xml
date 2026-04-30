@@ -1,3 +1,153 @@
 <resources>
     <string name="app_name">Assignment3</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="step_2_of_2">STEP 2 OF 2</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="full_name_hint">Julianne Moore</string>
+    <string name="account_type">Account Type</string>
+    <string name="account_type_hint">Seller</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="phone_number_hint">202-555-0143</string>
+    <string name="country_code">+1</string>
+    <string name="gender">GENDER</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="country">COUNTRY</string>
+    <string name="country_hint">United States</string>
+    <string name="residential_address">RESIDENTIAL ADDRESS</string>
+    <string name="address_hint">742 Evergreen Terrace, Springfield</string>
+    <string name="terms_and_conditions">I agree to the Terms of Service and Privacy Policy. We use your data to personalize your curated experience.</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="onboarding_title">Welcome to FastMart</string>
+    <string name="onboarding_subtitle">Discover products you love, \ndelivered to your door.</string>
+    <string name="onboarding_started_text">Get Started</string>
+    <string name="loginpage_started_now">Get Started now</string>
+    <string name="loginpg_subtext">Create an account or log in to explore about our app</string>
+    <string name="login_text">Log In</string>
+    <string name="signup_text">Sign Up</string>
+    <string name="Password_text">Password</string>
+    <string name="verify_pwd">Verify Password</string>
+    <string name="email_text">Email</string>
+    <string name="deals_text">Deals of the Day</string>
+    <string name="recommended_text">Recommended for you</string>
+    <string name="search">Search</string>
+    <string name="recent_search">Recent Searches</string>
+    <string name="clear_all_text">Clear All</string>
+    <string name="jeans">Jeans</string>
+    <string name="casual_clothes">Casual Clothes</string>
+    <string name="hoodie">Hoodie</string>
+    <string name="shoes_nike">Nike Shoes Black</string>
+    <string name="v_neck_shirt">V-neck tshirt</string>
+    <string name="winter_cloth">Winter clothes</string>
+    <string name="placeholder">placeholder</string>
+    <string name="fav">Favourites</string>
+    <string name="home">Home</string>
+    <string name="browse">Browse</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="shipping">Shipping</string>
+    <string name="total">Total</string>
+    <string name="checkout">Checkout</string>
+    <string name="account">Account</string>
+    <string name="details">My Details</string>
+    <string name="fullname">Full Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="dob">Date of Birth</string>
+    <string name="phone_num">Phone Number</string>
+    <string name="saved">Saved</string>
+
+    <string-array name="product_names">
+        <item>SONY Premium Wireless Headphones</item>
+        <item>SHURE SM7B Microphone</item>
+        <item>XIAOMI Redmi Watch 3</item>
+        <item>RØDE PodMic Dynamic</item>
+        <item>Logitech G Pro Keyboard</item>
+        <item>Apple AirPods Pro</item>
+        <item>Samsung Galaxy Buds 2</item>
+        <item>Bose QuietComfort 45</item>
+        <item>Razer DeathAdder V2</item>
+        <item>SteelSeries Arctis 7</item>
+        <item>HyperX QuadCast S</item>
+        <item>Blue Yeti USB Mic</item>
+        <item>Dell UltraSharp Monitor</item>
+        <item>HP LaserJet Pro</item>
+        <item>Canon EOS R6 Camera</item>
+        <item>GoPro HERO10 Black</item>
+        <item>DJI Mini 3 Pro Drone</item>
+        <item>Kindle Paperwhite</item>
+        <item>Nintendo Switch OLED</item>
+        <item>PlayStation 5 Controller</item>
+        <item>Xbox Series X Controller</item>
+        <item>Anker PowerCore 20K</item>
+        <item>Seagate 2TB Expansion</item>
+        <item>Fitbit Charge 5</item>
+        <item>Garmin Instinct 2</item>
+    </string-array>
+
+    <string-array name="product_prices">
+        <item>$349.99</item>
+        <item>$399.00</item>
+        <item>$94.90</item>
+        <item>$108.20</item>
+        <item>$129.99</item>
+        <item>$249.00</item>
+        <item>$149.99</item>
+        <item>$329.00</item>
+        <item>$69.99</item>
+        <item>$179.99</item>
+        <item>$159.99</item>
+        <item>$129.00</item>
+        <item>$599.99</item>
+        <item>$299.00</item>
+        <item>$2499.00</item>
+        <item>$499.99</item>
+        <item>$759.00</item>
+        <item>$139.99</item>
+        <item>$349.00</item>
+        <item>$69.99</item>
+        <item>$59.99</item>
+        <item>$49.99</item>
+        <item>$109.99</item>
+        <item>$179.00</item>
+        <item>$199.99</item>
+    </string-array>
+
+    <string-array name="product_descriptions">
+        <item>Premium wireless noise cancelling headphones.</item>
+        <item>Professional vocal microphone for broadcast.</item>
+        <item>1.75-inch AMOLED display smart watch.</item>
+        <item>Dynamic microphone optimized for podcasting.</item>
+        <item>High-performance mechanical gaming keyboard.</item>
+        <item>Magic like you\'ve never heard with active noise cancellation.</item>
+        <item>Wireless earbuds with deep, immersive sound.</item>
+        <item>Iconic quiet, comfort, and sound world-class performance.</item>
+        <item>Ergonomic gaming mouse with lightning-fast speed.</item>
+        <item>Lossless 2.4 GHz wireless gaming headset.</item>
+        <item>All-inclusive standalone microphone for streamers.</item>
+        <item>The ultimate professional USB microphone.</item>
+        <item>4K monitor with brilliant color and clarity.</item>
+        <item>Fast and reliable office laser printing.</item>
+        <item>Full-frame mirrorless camera for professionals.</item>
+        <item>The most powerful GoPro yet with 5.3K video.</item>
+        <item>Foldable mini-drone with 4K HDR video.</item>
+        <item>Waterproof e-reader with adjustable warm light.</item>
+        <item>Vibrant 7-inch OLED screen gaming console.</item>
+        <item>Wireless controller for immersive gaming.</item>
+        <item>Responsive feedback for next-gen gaming.</item>
+        <item>High-capacity portable charger for all devices.</item>
+        <item>High-speed portable external hard drive.</item>
+        <item>Advanced fitness tracker with built-in GPS.</item>
+        <item>Rugged GPS smartwatch built for the outdoors.</item>
+    </string-array>
+
+    <string name="deal_1_name">RØDE PodMic</string>
+    <string name="deal_2_name">Sony WH-1000XM5</string>
+    <string name="deal_3_name">Logitech MX Master 3S</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
