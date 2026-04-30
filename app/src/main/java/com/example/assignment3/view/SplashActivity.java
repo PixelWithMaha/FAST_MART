@@ -56,7 +56,7 @@ public class SplashActivity extends AppCompatActivity {
                     if ("Seller".equals(accountType)) {
                         intent = new Intent(SplashActivity.this, SellerDashboardActivity.class);
                     } else {
-                        intent = new Intent(SplashActivity.this, MainActivity.class);
+                        intent = new Intent(SplashActivity.this, BuyerHomeActivity.class);
                     }
                 }
                 else {
