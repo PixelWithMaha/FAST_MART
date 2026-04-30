@@ -64,8 +64,8 @@ public class LoginFragment extends Fragment {
 
                 Intent intent;
                 if ("Seller".equals(user.accountType)) {
-                    // intent = new Intent(getActivity(), SellerDashboardActivity.class);
-                    intent = new Intent(getActivity(), MainActivity.class);
+                    intent = new Intent(getActivity(), SellerDashboardActivity.class);
+
                 } else {
                     // intent = new Intent(getActivity(), BuyerDashboardActivity.class);
                     intent = new Intent(getActivity(), MainActivity.class);
